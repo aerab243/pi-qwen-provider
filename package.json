@@ -1,10 +1,17 @@
 {
   "name": "pi-qwen-provider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Qwen AI provider extension for Pi - OAuth authentication with qwen.ai",
   "main": "index.ts",
   "type": "module",
-  "keywords": ["pi", "qwen", "ai", "coding", "provider", "oauth"],
+  "keywords": [
+    "pi",
+    "qwen",
+    "ai",
+    "coding",
+    "provider",
+    "oauth"
+  ],
   "author": "aerab243",
   "license": "MIT",
   "repository": {
