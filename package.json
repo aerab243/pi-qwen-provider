@@ -1,6 +1,6 @@
 {
   "name": "pi-qwen-provider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Qwen AI provider extension for Pi - OAuth authentication with qwen.ai",
   "main": "index.ts",
   "type": "module",
@@ -24,6 +24,8 @@
     "node": ">=20.0.0"
   },
   "pi": {
-    "extensions": ["./index.ts"]
+    "extensions": [
+      "./index.ts"
+    ]
   }
 }
