@@ -7,6 +7,8 @@
   "keywords": [
     "pi-package",
     "pi",
+    "pi-agent",
+    "extension",
     "qwen",
     "ai",
     "coding",
@@ -25,7 +27,10 @@
   },
   "pi": {
     "extensions": [
-      "./index.ts"
+      "index.ts"
     ]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
   }
 }
