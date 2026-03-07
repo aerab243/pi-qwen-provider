@@ -1,0 +1,12 @@
+{
+  "name": "pi-qwen-provider",
+  "version": "1.0.0",
+  "description": "Qwen AI provider for Pi - OAuth authentication with qwen.ai",
+  "type": "module",
+  "keywords": ["pi", "qwen", "ai", "coding", "provider"],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
