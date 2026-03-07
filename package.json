@@ -1,11 +1,17 @@
 {
   "name": "pi-qwen-provider",
   "version": "1.0.0",
-  "description": "Qwen AI provider for Pi - OAuth authentication with qwen.ai",
+  "description": "Qwen AI provider extension for Pi - OAuth authentication with qwen.ai",
+  "main": "index.ts",
   "type": "module",
-  "keywords": ["pi", "qwen", "ai", "coding", "provider"],
-  "author": "",
+  "keywords": ["pi", "qwen", "ai", "coding", "provider", "oauth"],
+  "author": "aerab243",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aerab243/pi-qwen-provider.git"
+  },
+  "homepage": "https://github.com/aerab243/pi-qwen-provider#readme",
   "engines": {
     "node": ">=20.0.0"
   }
