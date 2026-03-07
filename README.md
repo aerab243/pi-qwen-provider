@@ -1,81 +1,89 @@
 # pi-qwen-provider
 
-Qwen AI provider extension for [Pi](https://github.com/badlogic/pi) - AI coding assistant.
-
-## Features
-
-- 🔐 **OAuth Authentication** - Sign in with your qwen.ai account (free 1,000 requests/day)
-- 🔑 **API Key Fallback** - Also supports Dashscope API key authentication
-- 📦 **Dynamic Models** - Automatically fetches available Qwen models
-- 🚀 **Qwen3 Coder** - Optimized for code generation with Qwen3-Coder models
+A Pi extension to use Qwen AI models via OAuth authentication with qwen.ai.
 
 ## Installation
 
-```bash
-# Install from git repository
-pi install git:github.com/VOTRE_USERNAME/pi-qwen-provider
-
-# Or local development
-pi install ./path/to/pi-qwen-provider
+```
+pi -p npm:pi-qwen-provider
 ```
 
-## Authentication
+Or via GitHub:
 
-### Option 1: OAuth (Recommended - Free)
+```
+pi -p git:github.com/aerab243/pi-qwen-provider
+```
 
-```bash
-# Start pi and login
+## Features
+
+- **OAuth Authentication**: Sign in with your qwen.ai account (free 1,000 requests/day)
+- **Automatic Token Refresh**: Tokens are automatically refreshed when expired
+- **Multiple Models**: Access to Qwen3 Coder Plus, Qwen3 Coder Flash, and more
+- **Vision Support**: Some models support image input
+- **Reasoning Models**: Extended thinking support for certain models
+
+## Requirements
+
+No external requirements! Just install and login.
+
+## Usage
+
+### 1. Install the extension
+
+```
+pi -p npm:pi-qwen-provider
+```
+
+### 2. Login with OAuth (recommended - free)
+
+```
 pi
 /login qwen-ai
 ```
 
-This opens a browser window for you to sign in with your qwen.ai account.
-- Free: 1,000 requests/day
-- No API key needed
-- Models are automatically updated
+This will open a browser window for you to sign in with your qwen.ai account.
 
-### Option 2: API Key (Dashscope)
+### 3. Use a model
 
-If you prefer to use Dashscope API directly:
-
-```bash
-# Set your API key
-export DASHSCOPE_API_KEY=sk-xxxxxxxxxxxxxxxx
-
-# Or add to auth.json
-echo '{"qwen-ai": {"type": "api_key", "key": "sk-xxx"}}' > ~/.pi/agent/auth.json
+```
+pi --provider qwen-ai --model qwen3-coder-plus
 ```
 
-Get your API key from: [Dashscope Console](https://dashscope.console.aliyun.com/)
+Or select interactively:
 
-## Available Models
-
-With OAuth (qwen.ai), you get access to all Qwen models available through their service:
-
-- **Qwen3 Coder Plus** - Advanced coding model (1M context)
-- **Qwen3 Coder Flash** - Fast coding model (1M context)
-- **Qwen3 32B** - Large model with reasoning (131K context)
-- **Qwen2.5 VL** - Vision model for images
-- And more...
-
-With API key, you can configure custom models in your settings.
-
-## Usage
-
-```bash
-# Start a coding session with Qwen
-pi --provider qwen-ai --model qwen3-coder-plus
-
-# Or select interactively
+```
 pi
 # Then select qwen-ai provider and a model
 ```
 
-## Environment Variables
+## Available Models
 
-| Variable | Description |
-|----------|-------------|
-| `DASHSCOPE_API_KEY` | Your Dashscope API key (for API key auth) |
+- **qwen3-coder-plus** - Advanced coding model (1M context)
+- **qwen3-coder-flash** - Fast coding model (1M context)
+- **qwen3-32b** - Large model with reasoning
+- **qwen2.5-vl-32b-instruct** - Vision model for images
+- **qwen-plus** - General purpose model
+- **qwen3-8b** - Lightweight model
+
+## Authentication
+
+### OAuth (Recommended - Free)
+
+Sign in with your qwen.ai account for 1,000 free requests per day.
+
+```
+/login qwen-ai
+```
+
+### API Key (Alternative)
+
+If you prefer to use Dashscope API directly:
+
+```bash
+export DASHSCOPE_API_KEY=sk-xxxxxxxxxxxxxxxx
+```
+
+Get your API key from: [Dashscope Console](https://dashscope.console.aliyun.com/)
 
 ## License
 
