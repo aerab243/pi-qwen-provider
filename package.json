@@ -5,6 +5,7 @@
   "main": "index.ts",
   "type": "module",
   "keywords": [
+    "pi-package",
     "pi",
     "qwen",
     "ai",
@@ -21,5 +22,8 @@
   "homepage": "https://github.com/aerab243/pi-qwen-provider#readme",
   "engines": {
     "node": ">=20.0.0"
+  },
+  "pi": {
+    "extensions": ["./index.ts"]
   }
 }
